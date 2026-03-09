@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>«Келешек-Тараз» | Ресми сайт</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
+body{background:#f4f6fb;color:#222}
+header{position:fixed;width:100%;top:0;left:0;background:rgba(0,0,50,0.85);backdrop-filter:blur(10px);padding:15px 60px;display:flex;justify-content:space-between;align-items:center;z-index:1000}
+header h1{color:#fff;font-size:20px;font-weight:700}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:500;transition:.3s}
+nav a:hover{color:#00e0ff}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,40,.7),rgba(0,0,40,.7)),url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h2{font-size:55px;font-weight:800;animation:fadeIn 2s ease}
+.hero p{margin-top:20px;font-size:20px;opacity:.9}
+.hero button{margin-top:30px;padding:15px 35px;border:none;border-radius:40px;background:#00e0ff;color:#000;font-weight:700;cursor:pointer;transition:.4s}
+.hero button:hover{background:#fff;transform:scale(1.05)}
+section{padding:100px 60px}
+.section-title{text-align:center;font-size:36px;margin-bottom:50px;color:#002b7a}
+.about{text-align:center;max-width:900px;margin:auto;line-height:1.8;font-size:18px}
+.cards{display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+.card{background:#fff;width:280px;padding:25px;border-radius:20px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.4s}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;border-radius:15px;margin-bottom:15px}
+.stats{display:flex;justify-content:center;gap:50px;flex-wrap:wrap}
+.stat{background:#002b7a;color:#fff;padding:40px;border-radius:20px;width:200px;text-align:center}
+.stat h3{font-size:40px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.gallery img{width:100%;border-radius:15px;cursor:pointer;transition:.4s}
+.gallery img:hover{transform:scale(1.05)}
+.contact{max-width:600px;margin:auto}
+.contact input,.contact textarea{width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc}
+.contact button{width:100%;padding:15px;border:none;border-radius:10px;background:#002b7a;color:#fff;font-weight:600;cursor:pointer}
+footer{background:#00194d;color:#fff;text-align:center;padding:30px}
+.modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.8);justify-content:center;align-items:center}
+.modal img{max-width:80%;border-radius:20px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.hero h2{font-size:35px}header{padding:15px 20px}}
+
+/* Dark mode */
+body.dark{background:#0f172a;color:#e5e7eb}
+body.dark header{background:#020617}
+body.dark section{background:transparent}
+body.dark .card{background:#111827;color:#e5e7eb}
+body.dark footer{background:#020617}
+
+/* buttons */
+.theme-toggle{position:fixed;right:25px;bottom:90px;padding:12px 16px;border:none;border-radius:10px;background:#004aad;color:#fff;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.scroll-top{position:fixed;right:25px;bottom:30px;padding:12px 16px;border:none;border-radius:10px;background:#111;color:#fff;cursor:pointer;display:none}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>«Келешек-Тараз» ҒИМЛ</h1>
+<nav>
+<a href="#about">Мектеп туралы</a>
+<a href="#teachers">Ұстаздар</a>
+<a href="#stats">Жетістіктер</a>
+<a href="#gallery">Галерея</a>
+<a href="#contact">Байланыс</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Сапалы білім – жарқын болашақ кепілі</h2>
+<p>Заманауи технологиялар мен кәсіби ұстаздар құрамы</p>
+<button onclick="scrollToSection('about')">Толығырақ</button>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">Мектеп туралы ақпарат</h2>
+<div class="about">
+<p>
+Келешек мектебі - Тараз қаласында орналасқан жеке меншік білім беру мекемесі. 2021 жылдан бастап біз балалардың жан-жақты дамуына, шығармашылық қабілеттерін ашуға және болашақта табысты болуға көмектесіп келеміз.
+
+Мектебіміз заманауи 4 қабатты ғимаратта орналасқан және барлық қажетті жабдықтармен толық жарақталған. Біз қазақ және орыс тілдерінде білім береміз.
+
+Біздің мұғалімдер командасы - жоғары білікті мамандар, олар әрбір баланың жеке ерекшелігін ескере отырып оқытады. Мектепте 58 педагог жұмыс істейді, оның ішінде шебер, зерттеуші және сарапшы мұғалімдер бар.
+</p>
+</div>
+</section>
+
+<section id="practice-supervisor">
+
+<h2 class="section-title">Практика жетекшім</h2>
+
+<div style="
+max-width:900px;
+margin:auto;
+background:#ffffff;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+display:flex;
+gap:30px;
+align-items:center;
+flex-wrap:wrap;">
+
+<img src="жансая.jpg" 
+style="
+width:180px;
+border-radius:12px;
+">
+
+<div>
+
+<h3 style="margin-bottom:10px;">Практика жетекшісі: Абдикапар Жансая Әлімжанқызы</h3>
+
+<p style="margin-bottom:10px;">
+Лауазымы: Информатика пәнінің мұғалімі және практика жетекшісі
+</p>
+
+
+<p>
+Практика барысында жетекші студенттерге веб-технологиялар,
+HTML негіздері және сайт жасау процесі бойынша бағыт-бағдар берді.
+Сонымен қатар практика кезеңінде оқу процесімен танысуға
+және мектептің ақпараттық жүйелерін зерттеуге мүмкіндік берді.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<h2 class="section-title">Мектеп әкімшілігі</h2>
+<div class="cards">
+<div class="card">
+<img src="жасұзақ.png">
+<h3>Исабеков Жасұзақ Орынбасарұлы.</h3>
+<p>Директор</p>
+</div>
+<div class="card">
+<img src="абылай.png">
+<h3>Сейдуалиев Абылай Алпысханұлы</h3>
+<p>Директордың тәрбие ісі жөніндегі орынбасары</p>
+</div>
+<div class="card">
+<img src="азиза.png">
+<h3>Әлімқұлова Әзиза Маратқызы</h3>
+<p>Директордың оқу ісі жөніндегі орынбасары</p>
+</div>
+</div>
+</section>
+
+<section id="stats">
+<h2 class="section-title">Жетістіктер</h2>
+<div class="stats">
+<div class="stat"><h3 id="students">0</h3><p>Оқушы</p></div>
+<div class="stat"><h3 id="teachersCount">0</h3><p>Ұстаз</p></div>
+<div class="stat"><h3 id="awards">0</h3><p>Жүлделі орын</p></div>
+</div>
+</section>
+
+
+<h2 class="section-title">Мектеп ауласы</h2>
+<div class="gallery">
+<img src="мдс 2.png" onclick="openModal(this)">
+<img src="мдс 1.png" onclick="openModal(this)">
+<img src="мдс 3.png" onclick="openModal(this)">
+</div>
+</section>
+
+<section id="news">
+<h2 class="section-title">Мектеп жаңалықтары</h2>
+<div class="cards">
+<div class="card">
+<h3>Олимпиада жеңімпаздары</h3>
+<p>2026 жылы мектеп оқушылары қалалық пән олимпиадаларында бірнеше жүлделі орындарға ие болды. Оқушылар математика және информатика бағыттарында жоғары нәтижелер көрсетті.</p>
+</div>
+<div class="card">
+<h3>IT кабинеті жаңартылды</h3>
+<p>Мектептің компьютерлік сыныптары жаңа техникамен жабдықталды. Бұл оқушыларға программалау және цифрлық технологияларды терең үйренуге мүмкіндік береді.</p>
+</div>
+<div class="card">
+<h3>Спорттық жарыстар</h3>
+<p>Мектеп командасы қалалық спорт жарыстарында белсенді қатысып, бірнеше марапаттарға ие болды.</p>
+</div>
+</div>
+</section>
+
+<section id="teachers">
+<h2 class="section-title">Мұғалімдер құрамы</h2>
+<div class="cards">
+<div class="card">
+<img src="исағали.jpg">
+<h3>Қайып Исағали Дүйсенұлы</h3>
+<p>Тарих пәні мұғалімі.
+Оқушыларға Қазақстан және дүниежүзі тарихын түсіндіріп, тарихи оқиғаларды талдауға және сыни ойлауға үйретеді.</p>
+</div>
+<div class="card">
+<img src="жансая.jpg">
+<h3>Абдикапар Жансая Әлімжанқызы</h3>
+<p>Информатика пәні мұғалімі.
+Оқушыларға компьютерлік сауаттылықты, бағдарламалау негіздерін және ақпараттық технологияларды қолдануды үйретеді.</p>
+</div>
+<div class="card">
+<img src="зулфия.jpg">
+<h3>Уразбаева Зульфия Яккубаевна</h3>
+<p>Қазақ тілі пәні мұғалімі.
+Оқушылардың дұрыс сөйлеу, сауатты жазу және қазақ тілінің грамматикасын меңгеру дағдыларын дамытады.</p>
+</div>
+<div class="card">
+<img src="насиба.jpg">
+<h3>Ораз Насиба Оразқызы</h3>
+<p>Ағылшын тілі пәні мұғалімі.
+Оқушылардың сөйлеу, оқу және жазу дағдыларын дамытады. Халықаралық ағылшын тілін үйренуге бағыт береді.</p>
+</div>
+</div>
+</section>
+
+
+
+<section id="achievements">
+<h2 class="section-title">Оқушылар жетістігі</h2>
+<div class="stats">
+<div class="stat"><h3>25+</h3><p>Олимпиада жүлдесі</p></div>
+<div class="stat"><h3>40+</h3><p>Спорттық медаль</p></div>
+<div class="stat"><h3>15+</h3><p>Ғылыми жоба</p></div>
+<div class="stat"><h3>100%</h3><p>Мектеп бітірушілер</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="section-title">Мектеп фотогалереясы</h2>
+<div class="gallery">
+<img src="мдс 4.png" onclick="openModal(this)">
+<img src="мдс 5.png" onclick="openModal(this)">
+<img src="мдс 6.png" onclick="openModal(this)">
+<img src="мдс 7.png" onclick="openModal(this)">
+<img src="мдс 8.png" onclick="openModal(this)">
+<img src="мдс 9.png" onclick="openModal(this)">
+<img src="мдс 10.png" onclick="openModal(this)">
+<img src="мдс 11.png" onclick="openModal(this)">
+</div>
+</section>
+
+<section id="map">
+<h2 class="section-title">Мектептің орналасқан жері</h2>
+
+<div style="max-width:1000px;margin:auto;border-radius:15px;overflow:hidden">
+
+<iframe 
+src="https://maps.google.com/maps?q=Taraz%20Koigeldi%20171&t=&z=17&ie=UTF8&iwloc=&output=embed"
+width="100%" 
+height="450" 
+style="border:0;" 
+loading="lazy">
+</iframe>
+
+</div>
+
+<div style="text-align:center;margin-top:20px;">
+
+<a href="https://maps.app.goo.gl/KkHS69JBPn8W7YCT9" target="_blank"
+style="display:inline-block;padding:14px 30px;background:#004aad;color:white;text-decoration:none;border-radius:10px;font-weight:600;">
+Google Maps-та ашу
+</a>
+
+</div>
+
+</section>
+
+<section id="contact">
+<h2 class="section-title">Байланыс</h2>
+<div class="contact">
+<input type="text" placeholder="Аты-жөніңіз">
+<input type="email" placeholder="Email">
+<textarea rows="5" placeholder="Хабарлама"></textarea>
+<button onclick="alert('Хабарлама жіберілді!')">Жіберу</button>
+</div>
+</section>
+
+<footer>
+© 2026 «Келешек-Тараз» ғылыми интеллектуалдық мектеп-лицейі | Мекен‑жайы: Тараз қаласы., Қолбасшы Көйгелді көшесі 171 | Мектеп директоры: Исабеков Жасұзақ Орынбасарұлы
+</footer>
+
+<div class="modal" id="modal" onclick="closeModal()">
+<img id="modalImg">
+</div>
+
+<script>
+function scrollToSection(id){
+ document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function animateValue(id,start,end,duration){
+ let range=end-start;
+ let current=start;
+ let increment=end>start?1:-1;
+ let stepTime=Math.abs(Math.floor(duration/range));
+ let obj=document.getElementById(id);
+ let timer=setInterval(function(){
+ current+=increment;
+ obj.textContent=current;
+ if(current==end){clearInterval(timer)}
+ },stepTime);
+}
+
+window.addEventListener('scroll',function(){
+ let stats=document.getElementById('stats');
+ let position=stats.getBoundingClientRect().top;
+ let screenPosition=window.innerHeight/1.3;
+ if(position<screenPosition){
+ animateValue('students',0,830,2000);
+ animateValue('teachersCount',0,58,2000);
+ animateValue('awards',0,25,2000);
+ }
+});
+
+function openModal(img){
+ document.getElementById('modal').style.display='flex';
+ document.getElementById('modalImg').src=img.src;
+}
+function closeModal(){
+ document.getElementById('modal').style.display='none';
+}
+</script>
+
+
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">⬆</button>
+
+<script>
+function toggleTheme(){
+ document.body.classList.toggle('dark');
+}
+
+const scrollBtn=document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll',()=>{
+ if(document.documentElement.scrollTop>300){
+  scrollBtn.style.display='block';
+ }else{
+  scrollBtn.style.display='none';
+ }
+});
+
+function scrollToTop(){
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
